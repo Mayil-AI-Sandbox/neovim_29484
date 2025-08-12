@@ -35,7 +35,7 @@ jobs:
     env:
       CC: clang
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/setup
 
       - name: Install stylua
@@ -85,7 +85,7 @@ jobs:
     env:
       CC: clang
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/setup
       - name: Build third-party deps
         run: |
@@ -121,7 +121,7 @@ jobs:
     env:
       CC: ${{ matrix.build.cc }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/setup
         with:
           install_flags: "--test"
@@ -204,7 +204,7 @@ jobs:
     env:
       CC: gcc
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/setup
 
       - name: Build third-party deps
@@ -230,7 +230,7 @@ jobs:
     env:
       CC: gcc
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/setup
 
       - name: Install dependencies
